@@ -3,7 +3,7 @@ export const eateryHTMLConverter = (eateryObject) => {
         <div>
             <h4>${eateryObject.businessName}</h4>
         </div>
-        <button id="detailButton--${eateryObject.id}">
+        <button id="detailButton--${eateryObject.id}">Details</button>
         <dialog>
             <div class="description">${eateryObject.description}</div>
             <div class="location">${eateryObject.city}, ${eateryObject.state}</div>

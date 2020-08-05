@@ -25,7 +25,7 @@ const render = (arrayOfEateries) => {
     })
     contentTarget.innerHTML = `
     <h3>Eatery:</h3>
-    <div>
+    <div class="previewContent">
     ${eateryHTML}
     </div>`
 }
