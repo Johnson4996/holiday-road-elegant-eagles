@@ -1,0 +1,31 @@
+@import "./dropdowns.css";
+@import "./header.css";
+@import "./plannedItinerary.css";
+@import "./preview.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+.container {
+    display: flex;
+}
+
+.leftContent{
+    flex: 3;
+}
+
+.rightContent{
+    flex: 1;
+}
+
+.filterContainer{
+    display: flex;
+}
+
+h1, h3, button {
+    font-family: 'Playfair Display', serif;
+}
+h4, select {
+    font-family: 'Raleway', sans-serif;
+}
