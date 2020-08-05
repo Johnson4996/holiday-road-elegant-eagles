@@ -7,6 +7,7 @@ export const AttractionHTMLConverter = (attractionObj) => {
         <dialog>
             <div class="description">${attractionObj.description}</div>
             <div class="location">${attractionObj.city}, ${attractionObj.state}</div>
+            <button id="closeAttractionDialogButton">Close</button>
         </dialog>
     `
 }

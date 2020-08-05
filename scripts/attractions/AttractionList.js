@@ -18,7 +18,7 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
 const render = (attractions) => {
   let attractionHTML = ""
   attractions.forEach((attraction) => {
-    attractionHTML = AttractionHTMLConverter(attraction)
+    attractionHTML += AttractionHTMLConverter(attraction)
   })
   contentTarget.innerHTML = `
     <h3>Attraction:</h3>
