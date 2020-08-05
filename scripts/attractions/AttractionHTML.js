@@ -8,6 +8,15 @@ export const AttractionHTMLConverter = (attractionObj) => {
         <dialog>
             <div class="description">${attractionObj.description}</div>
             <div class="location">${attractionObj.city}, ${attractionObj.state}</div>
+            <button id="closeAttractionDialogButton">Close</button>
         </dialog>
     `
 }
+
+// Will potentially add a default attraction function so preview will not be empty
+
+// export const defaultAttraction = () => {
+//   return `
+
+//     `
+// }
