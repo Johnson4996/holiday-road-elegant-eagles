@@ -1,19 +1,15 @@
 import {useAttractions, getAttractions} from "./AttractionProvider.js"
 
-const render = (attractionsCollection, unfilteredCollection) => {
+const contentTarget = document.querySelector(".attractionsFilter")
+const attractionDropdown = document.getElementById("attractions")
+
+const render = (attractionsCollection) => {
   contentTarget.innerHTML =
     // sets value of Please select attraction to zero then maps over the array of attractions and returns option to render one attraction
     `
         <select class="dropdown" id="attractions"> 
-            <option value="0">Attractions Near Your Park</option>  
-        ${attractionsCollection
-          .map((singleAttraction) => {
-            return `<option value="${singleAttraction.id}" class="selectOption">${singleAttraction.name}</option>`
-          })
-          .join("")}
-          <option value="0"></option> 
           <option value="0">All Attractions</option> 
-          ${unfilteredCollection
+          ${attractionsCollection
             .map((singleAttraction) => {
               return `<option value="${singleAttraction.id}" class="selectOption">${singleAttraction.name}</option>`
             })
