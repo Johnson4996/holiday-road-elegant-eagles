@@ -1,11 +1,13 @@
 import {AttractionList} from "./attractions/AttractionList.js"
 import {AttractionSelect} from "./attractions/AttractionSelect.js"
-
 import {eateryList} from "./eateries/EateryList.js"
 import {eaterySelect} from "./eateries/EaterySelect.js"
+import {ParkSelect} from "./parks/ParkSelect.js"
 
 //import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 
+//import { getEateries, useEateries } from "./eateries/EateryProvider.js"
+ParkSelect()
 AttractionList()
 AttractionSelect()
 eaterySelect()
