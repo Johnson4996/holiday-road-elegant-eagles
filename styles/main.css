@@ -41,3 +41,7 @@ h1, h3, button {
 h4, select {
     font-family: 'Raleway', sans-serif;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+}
