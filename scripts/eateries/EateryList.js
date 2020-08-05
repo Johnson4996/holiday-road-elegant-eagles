@@ -1,5 +1,6 @@
 import { useEateries, getEateries } from "./EateryProvider.js"
 import { eateryHTMLConverter } from "./EateryHTML.js"
+import { showEateryDetails } from "./EateryDetails.js"
 
 
 const contentTarget = document.querySelector(".eateries")
@@ -36,5 +37,6 @@ export const eateryList = () => {
             const eateryArray = useEateries()
             render(eateryArray)
         })
+        .then(showEateryDetails)
 
 }
