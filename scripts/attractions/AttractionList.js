@@ -4,7 +4,7 @@ import {AttractionHTMLConverter} from "./AttractionHTML.js"
 const contentTarget = document.querySelector(".attractions")
 const eventHub = document.querySelector(".container")
 
-// const clearAttractionsList = () => (contentTarget.innerHTML = "")
+const clearAttractionsList = () => (contentTarget.innerHTML = "")
 
 eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   const attractionChosen = attractionSelectedEvent.detail.attractionId
@@ -15,10 +15,11 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   render(attractionObj)
 })
 
-const render = (attractions) => {
+const render = (attractionArray) => {
   let attractionHTML = ""
-  attractions.forEach((attraction) => {
-    attractionHTML += AttractionHTMLConverter(attraction)
+
+  attractionArray.forEach((attraction) => {
+    attractionHTML = AttractionHTMLConverter(attraction)
   })
   contentTarget.innerHTML = `
     <h3>Attraction:</h3>
@@ -29,7 +30,7 @@ const render = (attractions) => {
 
 export const AttractionList = () => {
   getAttractions().then(() => {
-    const attraction = useAttractions()
-    render(attraction)
+    const attractionArray = useAttractions()
+    render(attractionArray)
   })
 }
