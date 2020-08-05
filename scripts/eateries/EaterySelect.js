@@ -22,7 +22,7 @@ const render = (eateries) => {
         ${
             eateries.map(
                 eatery => {
-                    return `<option value="${eatery.businessName}">${eatery.businessName}</option>`
+                    return `<option value="${eatery.id}">${eatery.businessName}</option>`
                 }
             ).join()
         }

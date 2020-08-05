@@ -1,5 +1,6 @@
 import {useEateries, getEateries} from "./EateryProvider.js"
 import {eateryHTMLConverter} from "./EateryHTML.js"
+import {showEateryDetails} from "./EateryDetails.js"
 
 const contentTarget = document.querySelector(".eateries")
 const eventHub = document.querySelector(".container")
@@ -13,21 +14,14 @@ eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
   render(foundEateryObj)
 })
 
-const render = (arrayOfEateries) => {
-  let eateryHTML = ""
-  arrayOfEateries.forEach((eatery) => {
-    eateryHTML = eateryHTMLConverter(eatery)
-  })
+const render = (eateryObject) => {
   contentTarget.innerHTML = `
     <h3>Eatery:</h3>
     <div class="previewContent">
-    ${eateryHTML}
+    ${eateryHTMLConverter(eateryObject)}
     </div>`
 }
 
 export const eateryList = () => {
-  getEateries().then(() => {
-    const eateryArray = useEateries()
-    render(eateryArray)
-  })
+  getEateries().then(showEateryDetails)
 }
