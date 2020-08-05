@@ -10,7 +10,7 @@ const render = (parksArray) =>{
                 <option value="0">Please select a park...</option>
                 ${
                     parksArray.map(parkObj => {
-                        return `<option>${parkObj.fullName}</option>`
+                        return `<option value= "${parkObj.parkCode}">${parkObj.fullName}</option>`
                     }).join("")
                 }
     </select>
