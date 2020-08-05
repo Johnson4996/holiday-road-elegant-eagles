@@ -15,22 +15,14 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   render(attractionObj)
 })
 
-const render = (attractionArray) => {
-  let attractionHTML = ""
-
-  attractionArray.forEach((attraction) => {
-    attractionHTML = AttractionHTMLConverter(attraction)
-  })
+const render = (attractionObj) => {
   contentTarget.innerHTML = `
     <h3>Attraction:</h3>
     <div class="previewContent">
-        ${attractionHTML}
+        ${AttractionHTMLConverter(attractionObj)}
     </div>`
 }
 
 export const AttractionList = () => {
-  getAttractions().then(() => {
-    const attractionArray = useAttractions()
-    render(attractionArray)
-  })
+  getAttractions().then(useAttractions).then(render)
 }
