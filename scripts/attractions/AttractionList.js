@@ -5,6 +5,7 @@ import {showAttractionDetails} from "./AttractionDialogButton.js"
 const contentTarget = document.querySelector(".attractions")
 const eventHub = document.querySelector(".container")
 
+// attraction selected event, when user selects an attraction the event renders the attraction to preview
 eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   const attractionChosen = attractionSelectedEvent.detail.attractionId
   const arrayOfAttractions = useAttractions()

@@ -3,6 +3,7 @@ import {useAttractions, getAttractions} from "./AttractionProvider.js"
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".attractionsFilter")
 
+// change event that triggers when user selects different attraction
 eventHub.addEventListener("change", (changeEvent) => {
   if (changeEvent.target.id === "attractions") {
     const attractionSelectedEvent = new CustomEvent("attractionSelected", {
@@ -16,7 +17,7 @@ eventHub.addEventListener("change", (changeEvent) => {
 
 const render = (attractionsCollection) => {
   contentTarget.innerHTML =
-    // sets value of Please select attraction to zero then maps over the array of attractions and returns option to render one attraction
+    // maps over the array of attractions and returns option to render one attraction
     `
         <select class="dropdown" id="attractions"> 
           <option value="0">Please select an attraction...</option> 
