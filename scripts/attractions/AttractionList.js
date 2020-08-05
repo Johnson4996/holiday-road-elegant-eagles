@@ -2,26 +2,30 @@ import {getAttractions, useAttractions} from "./AttractionProvider.js"
 import {AttractionHTMLConverter} from "./AttractionHTML.js"
 
 const contentTarget = document.querySelector(".attractions")
+const eventHub = document.querySelector(".container")
 
-const clearAttractionsList = () => (contentTarget.innerHTML = "")
-let attractionSelectionArray = []
+// const clearAttractionsList = () => (contentTarget.innerHTML = "")
 
-const render = (arrayOfAttractions) => {
-  // console.log("CriminalList: Rendered to DOM")
-  let attractionHTML = ""
-
-  arrayOfAttractions.forEach((attraction) => {
-    attractionHTML += AttractionHTMLConverter(attraction)
+eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
+  const attractionChosen = attractionSelectedEvent.detail.attractionId
+  const arrayOfAttractions = useAttractions()
+  const attractionObj = arrayOfAttractions.find((attraction) => {
+    return parseInt(attractionChosen) === attraction.id
   })
+  render(attractionObj)
+})
 
+const render = (attractions) => {
+  let attractionHTML = ""
+  attractions.forEach((attraction) => {
+    attractionHTML = AttractionHTMLConverter(attraction)
+  })
   contentTarget.innerHTML = `
-        <h3>Attractions</h3>
-        <div class="previewContent">
-            ${attractionHTML}
-        </div>
-    `
+    <h3>Attraction:</h3>
+    <div class="previewContent">
+        ${attractionHTML}
+    </div>`
 }
-// ${ AssociatesDialog() }
 
 export const AttractionList = () => {
   getAttractions().then(() => {
