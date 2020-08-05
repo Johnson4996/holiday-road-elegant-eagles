@@ -1,0 +1,13 @@
+.previewContainer {
+    border: 2px dotted goldenrod;
+}
+
+.previewContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eateries {
+    border: 1px dotted black;
+    padding: 1rem;
+}
