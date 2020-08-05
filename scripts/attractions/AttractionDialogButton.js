@@ -1,4 +1,3 @@
-const contentTarget = document.querySelector(".previewContainer")
 const eventHub = document.querySelector(".container")
 
 export const showAttractionDetails = () => {

@@ -7,11 +7,11 @@ import {ParkSelect} from "./parks/ParkSelect.js"
 //import { getEateries, useEateries } from "./eateries/EateryProvider.js"
 
 //import { getEateries, useEateries } from "./eateries/EateryProvider.js"
-ParkSelect()
 AttractionList()
 AttractionSelect()
-eaterySelect()
 eateryList()
+eaterySelect()
+ParkSelect()
 
 /*const array = getEateries().then(() => {
     const test = useEateries()

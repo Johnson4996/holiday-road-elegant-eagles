@@ -1,10 +1,9 @@
 import {getAttractions, useAttractions} from "./AttractionProvider.js"
 import {AttractionHTMLConverter} from "./AttractionHTML.js"
+import {showAttractionDetails} from "./AttractionDialogButton.js"
 
 const contentTarget = document.querySelector(".attractions")
 const eventHub = document.querySelector(".container")
-
-const clearAttractionsList = () => (contentTarget.innerHTML = "")
 
 eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   const attractionChosen = attractionSelectedEvent.detail.attractionId
@@ -24,5 +23,5 @@ const render = (attractionObj) => {
 }
 
 export const AttractionList = () => {
-  getAttractions().then(useAttractions).then(render)
+  getAttractions().then(showAttractionDetails)
 }
