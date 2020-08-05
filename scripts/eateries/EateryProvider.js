@@ -5,9 +5,10 @@ export const useEateries = () => {
 }
 
 export const getEateries = () => {
-    fetch("http://holidayroad.nss.team/eateries")
+    return fetch("http://holidayroad.nss.team/eateries")
         .then(response => response.json())
-        .then(data => {
+        .then(
+            data => {
             eateries = data
         })
 }

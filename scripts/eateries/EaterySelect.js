@@ -1,18 +1,18 @@
 import { getEateries, useEateries } from "./EateryProvider.js"
 
-const contentTarget = document.querySelector(".")
+const contentTarget = document.querySelector(".eateryFilter")
 const eventHub = document.querySelector('.container')
 
-/* eventHub.addEventListener("change", (changeEvent) => {
-    if (changeEvent.target.id === "eateries")
-    const eaterySelectedEvent = new CustomEvent("eaterySelected",
-        detail: {
-            eateryName: changeEvent.target.value
-        }
-    })
+eventHub.addEventListener("change", (changeEvent) => {
+    if (changeEvent.target.id === "eateries") {
+        const eaterySelectedEvent = new CustomEvent("eaterySelected", {
+            detail: {
+                eateryId: changeEvent.target.value
+            }
+        })
     eventHub.dispatchEvent(eaterySelectedEvent)
-}
-})*/
+    }
+})
 
 
 const render = (eateries) => {
@@ -22,7 +22,7 @@ const render = (eateries) => {
         ${
             eateries.map(
                 eatery => {
-                    return `<option value="${eatery.name}">${eatery.name}</option>`
+                    return `<option value="${eatery.businessName}">${eatery.businessName}</option>`
                 }
             ).join()
         }

@@ -1,6 +1,13 @@
-export const eateryHTMLConverter = () => {
+export const eateryHTMLConverter = (eateryObject) => {
     return `
-    
+        <div>
+            <h4>${eateryObject.businessName}</h4>
+        </div>
+        <button id="detailButton--${eateryObject.id}">
+        <dialog>
+            <div class="description">${eateryObject.description}</div>
+            <div class="location">${eateryObject.city}, ${eateryObject.state}</div>
+        </dialog>
     `
 }
 
