@@ -1,6 +1,5 @@
 export const AttractionHTMLConverter = (attractionObj) => {
   return `
-        <h3>Attractions</h3>
         <div>
             <h4>${attractionObj.name}</h4>
         </div>

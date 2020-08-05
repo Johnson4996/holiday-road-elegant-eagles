@@ -15,9 +15,10 @@ const render = (arrayOfAttractions) => {
   })
 
   contentTarget.innerHTML = `
-        <article class="criminalList">
+        <h3>Attractions</h3>
+        <div class="previewContent">
             ${attractionHTML}
-        </article>
+        </div>
     `
 }
 // ${ AssociatesDialog() }

@@ -34,3 +34,10 @@ contentTarget.addEventListener("change", (event) => {
     }
   }
 })
+
+export const AttractionSelect = () => {
+  getAttractions().then(() => {
+    const allAttractions = useAttractions()
+    render(allAttractions)
+  })
+}
