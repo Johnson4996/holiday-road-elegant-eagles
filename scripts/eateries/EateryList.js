@@ -19,24 +19,19 @@ eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
 })
 
 
-const render = (arrayOfEateries) => {
-    let eateryHTML = ""
-    arrayOfEateries.forEach(eatery => {
-        eateryHTML = eateryHTMLConverter(eatery)
-    })
+const render = (eateryObject) => {
+    
     contentTarget.innerHTML = `
     <h3>Eatery:</h3>
     <div class="previewContent">
-    ${eateryHTML}
+    ${
+        eateryHTMLConverter(eateryObject)
+    }
     </div>`
 }
 
 export const eateryList = () => {
     getEateries()
-        .then(() => {
-            const eateryArray = useEateries()
-            render(eateryArray)
-        })
         .then(showEateryDetails)
 
 }
