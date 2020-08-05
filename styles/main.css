@@ -23,4 +23,9 @@
     display: flex;
 }
 
-
+h1, h3, button {
+    font-family: 'Playfair Display', serif;
+}
+h4, select {
+    font-family: 'Raleway', sans-serif;
+}
