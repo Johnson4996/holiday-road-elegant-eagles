@@ -14,13 +14,14 @@ eventHub.addEventListener("parkSelected", (parkSelected) => {
         return park.parkCode === parkChosen
     })
     console.log(currentChosenPark)
+    getWeather(currentChosenPark)
 })
 
 export const useWeather = () => {
     return weather.slice()
 }
-export const getWeather = () => {
-    return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=38&lon=-77&units=imperial&appid=${settings.weatherKey}`)
+export const getWeather = (parkObject) => {
+    return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${parseInt(parkObject.longitude)}&lon=${parseInt(parkObject.latitude)}&units=imperial&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(weatherData => {
             weather = weatherData.list
