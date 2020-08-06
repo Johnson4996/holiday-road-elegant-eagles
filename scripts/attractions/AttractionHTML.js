@@ -16,25 +16,12 @@ export const AttractionHTMLConverter = (attractionObj) => {
     `
 }
 
-// const removeElement = () => {
-//   const elem = document.getElementById(`divHeader`)
-//   elem.remove()
-// }
-
-// Stack Overflow function that moves element
-
-// const removeElement = (attractionObj) => {
-//     var elem = document.getElementById(`header--${attractionObj.id}`);
-//     elem.parentNode.removeChild(elem);
-//     return false;
-// }
+// this is the click event for all of the removal buttons in content preview
 
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id.startsWith("closeHeader--")) {
-        console.log("test")
-        // const attractionDeletedEvent = new CustomEvent("attractionDeleted", {
+        // console.log("test")
           const contentTarget = document.querySelector(`.previewContent`) 
           contentTarget.innerHTML = contentTarget.remove()
-        // }
     }
 })
