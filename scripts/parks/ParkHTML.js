@@ -1,7 +1,7 @@
 export const parkHTML = (parkObj) => {
     return `
     <div>
-        <button id="closeHeader--${parkObj.parkCode}}">X</button>
+        <button id="closeButton--${parkObj.parkCode}}">X</button>
         <h4>${parkObj.fullName}</h4>
     </div>
     <button id="parkDetailButton--${parkObj.parkCode}">Details</button>

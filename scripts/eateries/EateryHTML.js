@@ -1,9 +1,7 @@
-const eventHub = document.querySelector(".container")
-
 export const eateryHTMLConverter = (eateryObject) => {
     return `
         <div id="divHeader">
-            <button id="closeHeader--${eateryObject.id}}">X</button>
+            <button id="closeButton--${eateryObject.id}}">X</button>
             <h4>${eateryObject.businessName}</h4>
         </div>
         <button id="detailButton--${eateryObject.id}">Details</button>
