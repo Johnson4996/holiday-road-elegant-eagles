@@ -19,6 +19,7 @@ EventHub.addEventListener("change", changeEvent =>{
 
 const render = (parksArray) =>{
     contentTarget.innerHTML += `
+    <h3>Parks</h3>
     <select id="parkSelect">
                 <option value="0">Please select a park...</option>
                 ${

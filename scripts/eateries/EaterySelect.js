@@ -17,12 +17,13 @@ eventHub.addEventListener("change", (changeEvent) => {
 
 const render = (eateries) => {
     contentTarget.innerHTML = `
+    <h3>Eateries</h3>
     <select class="dropdown" id="eateries">
         <option value="0">Please select an eatery...</option>
         ${
             eateries.map(
                 eatery => {
-                    return `<option value="${eatery.id}">${eatery.businessName}</option>`
+                        return `<option value="${eatery.id}">${eatery.businessName}</option>`
                 }
             ).join()
         }

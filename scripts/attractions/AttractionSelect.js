@@ -19,6 +19,7 @@ const render = (attractionsCollection) => {
   contentTarget.innerHTML =
     // maps over the array of attractions and returns option to render one attraction
     `
+        <h3>Attractions</h3>
         <select class="dropdown" id="attractions"> 
           <option value="0">Please select an attraction...</option> 
           ${attractionsCollection
