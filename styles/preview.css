@@ -24,3 +24,12 @@
 .dialogContent{
   padding: 1.5rem
 }
+button{
+  border-radius: 30%;
+  border: 2px outset;
+  
+}
+button:hover {
+  background-color: rgb(59, 120, 173)
+}
+
