@@ -12,8 +12,7 @@ eventHub.addEventListener("parkSelected", (parkSelected) => {
     const currentChosenPark = allTheParks.find(park => {
         return park.parkCode === parkChosen
     })
-    getWeather(currentChosenPark)
-    weatherList()
+    getWeather(currentChosenPark).then(weatherList)
 })
 
 export const useWeather = () => {
