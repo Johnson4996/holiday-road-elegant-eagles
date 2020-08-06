@@ -7,12 +7,9 @@
   justify-content: space-between;
 }
 
-.eateries {
+.eateries, .attractions, .park {
   border: 1px dotted black;
   padding: 1rem;
 }
 
-.attractions {
-  border: 1px dotted black;
-  padding: 1rem;
-}
+
