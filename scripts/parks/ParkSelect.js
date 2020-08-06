@@ -1,4 +1,5 @@
 import { getParks, useParks } from "./ParkProvider.js"
+import "./ParkList.js"
 
 const contentTarget = document.querySelector(".parkFilter")
 const EventHub = document.querySelector(".container")
