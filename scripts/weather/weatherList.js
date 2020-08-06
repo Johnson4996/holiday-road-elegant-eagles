@@ -3,7 +3,7 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("parkSelected", (parkSelected) => {
     const parkChosen = parkSelected.detail.parkId
-    console.log("its loging", parkChosen)
+    console.log(parkChosen)
 
 })
 

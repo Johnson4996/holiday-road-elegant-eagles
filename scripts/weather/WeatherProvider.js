@@ -1,6 +1,20 @@
 import settings from "../Settings.js"
+import { useParks } from "../parks/ParkProvider.js"
+
+const eventHub = document.querySelector(".container")
 
 let weather = []
+
+eventHub.addEventListener("parkSelected", (parkSelected) => {
+    const parkChosen = parkSelected.detail.parkId
+    console.log("THIS IS GRABING PARK CODE", parkChosen)
+    const allTheParks = useParks()
+    console.log(allTheParks)
+    const currentChosenPark = allTheParks.find(park => {
+        return park.parkCode === parkChosen
+    })
+    console.log(currentChosenPark)
+})
 
 export const useWeather = () => {
     return weather.slice()

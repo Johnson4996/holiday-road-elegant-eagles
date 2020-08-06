@@ -1,13 +1,18 @@
 .previewContainer {
-    border: 2px dotted goldenrod;
+  border: 2px dotted goldenrod;
 }
 
 .previewContent {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .eateries {
-    border: 1px dotted black;
-    padding: 1rem;
+  border: 1px dotted black;
+  padding: 1rem;
+}
+
+.attractions {
+  border: 1px dotted black;
+  padding: 1rem;
 }
