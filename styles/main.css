@@ -41,7 +41,11 @@ h1, h3, button {
 h4, select {
     font-family: 'Raleway', sans-serif;
 }
+.leftContent, .rightContent{
+    padding-bottom: 2.5rem;
+}
 footer {
     position: absolute;
+    height: 2.5rem;
     bottom: 0;
 }
