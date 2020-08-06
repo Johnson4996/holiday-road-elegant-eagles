@@ -1,5 +1,6 @@
 import settings from "../Settings.js"
 import { useParks } from "../parks/ParkProvider.js"
+import { weatherList } from "./weatherList.js"
 
 const eventHub = document.querySelector(".container")
 
@@ -12,6 +13,7 @@ eventHub.addEventListener("parkSelected", (parkSelected) => {
         return park.parkCode === parkChosen
     })
     getWeather(currentChosenPark)
+    weatherList()
 })
 
 export const useWeather = () => {
