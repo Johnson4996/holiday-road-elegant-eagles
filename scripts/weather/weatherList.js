@@ -1,7 +1,7 @@
 import { weatherHTML } from "./weatherHTML.js"
 import { useWeather } from "./WeatherProvider.js"
 
-const contentTarget = document.querySelector(".park") //or ".previewContent"
+const contentTarget = document.querySelector(".weather") //or ".previewContent"
 
 export const weatherList = () => {
     contentTarget.innerHTML += `<h4>Your 5 day Forecast</h4>`
@@ -13,8 +13,7 @@ export const weatherList = () => {
 
 const render = (weatherObj) => {
     contentTarget.innerHTML += `
-    <article class="weatherForecast">
     ${weatherHTML(weatherObj)}
-    </article>
+
     `
 }
