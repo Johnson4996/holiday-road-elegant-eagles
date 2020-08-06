@@ -15,8 +15,7 @@ eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
 })
 
 const render = (eateryObject) => {
-  contentTarget.innerHTML = `
-    <h3>Eatery:</h3>
+  contentTarget.innerHTML += `
     <div class="previewContent">
     ${eateryHTMLConverter(eateryObject)}
     </div>`
