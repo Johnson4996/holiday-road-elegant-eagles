@@ -10,7 +10,7 @@ eventHub.addEventListener("change", (changeEvent) => {
                 eateryId: changeEvent.target.value
             }
         })
-    eventHub.dispatchEvent(eaterySelectedEvent)
+        eventHub.dispatchEvent(eaterySelectedEvent)
     }
 })
 
