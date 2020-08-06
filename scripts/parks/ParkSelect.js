@@ -1,7 +1,21 @@
 import { getParks, useParks } from "./ParkProvider.js"
+import "./ParkList.js"
 
 const contentTarget = document.querySelector(".parkFilter")
 const EventHub = document.querySelector(".container")
+
+
+EventHub.addEventListener("change", changeEvent =>{
+    if(changeEvent.target.id === "parkSelect"){
+        const parkSelected = new CustomEvent("parkSelected",{
+            detail:{
+               parkId: changeEvent.target.value
+            }
+        })
+        EventHub.dispatchEvent(parkSelected)
+    }
+})
+
 
 
 const render = (parksArray) =>{
@@ -17,7 +31,6 @@ const render = (parksArray) =>{
     `
 
 }
-
 
 
 
