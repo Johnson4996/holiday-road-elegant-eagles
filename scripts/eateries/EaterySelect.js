@@ -10,13 +10,13 @@ eventHub.addEventListener("change", (changeEvent) => {
                 eateryId: changeEvent.target.value
             }
         })
-    eventHub.dispatchEvent(eaterySelectedEvent)
+        eventHub.dispatchEvent(eaterySelectedEvent)
     }
 })
 
 
 const render = (eateries) => {
-    contentTarget.innerHTML = `
+        contentTarget.innerHTML = `
     <select class="dropdown" id="eateries">
         <option value="0">Please select an eatery...</option>
         ${

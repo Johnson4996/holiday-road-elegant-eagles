@@ -5,11 +5,11 @@ const contentTarget = document.querySelector(".parkFilter")
 const EventHub = document.querySelector(".container")
 
 
-EventHub.addEventListener("change", changeEvent =>{
-    if(changeEvent.target.id === "parkSelect"){
-        const parkSelected = new CustomEvent("parkSelected",{
-            detail:{
-               parkId: changeEvent.target.value
+EventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.id === "parkSelect") {
+        const parkSelected = new CustomEvent("parkSelected", {
+            detail: {
+                parkId: changeEvent.target.value
             }
         })
         EventHub.dispatchEvent(parkSelected)
@@ -18,8 +18,9 @@ EventHub.addEventListener("change", changeEvent =>{
 
 
 
-const render = (parksArray) =>{
-    contentTarget.innerHTML += `
+const render = (parksArray) => {
+        contentTarget.innerHTML += `
+
     <select id="parkSelect">
                 <option value="0">Please select a park...</option>
                 ${
@@ -29,7 +30,6 @@ const render = (parksArray) =>{
                 }
     </select>
     `
-
 }
 
 
