@@ -6,8 +6,10 @@ export const parkHTML = (parkObj) => {
 <button id="parkDetailButton--${parkObj.parkCode}">Details</button>
 <dialog class="park--${parkObj.parkCode}">
     <button id="closeWindow">X</button>
-    <div class="description">Description: ${parkObj.description}</div>
-    <div class="location">Location: ${parkObj.addresses[0].city}, ${parkObj.addresses[0].stateCode}</div>
+    <div class="dialogTitle">Description: </div>
+    <div class="dialogContent">${parkObj.description}</div>
+    <div class="dialogTitle">Location: </div>
+    <div class="dialogContent">${parkObj.addresses[0].city}, ${parkObj.addresses[0].stateCode}</div>
 </dialog>
     `
 }
