@@ -6,6 +6,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+.cottage {
+    width: 10%;
+}
+
 body {
     background-image: url(../images/mona-eendra-vC8wj_Kphak-unsplash.jpg);
 }
@@ -31,4 +40,8 @@ h1, h3, button {
 }
 h4, select {
     font-family: 'Raleway', sans-serif;
+}
+footer {
+    position: absolute;
+    bottom: 0;
 }
