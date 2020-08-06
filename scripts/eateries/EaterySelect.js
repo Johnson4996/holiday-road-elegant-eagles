@@ -10,19 +10,22 @@ eventHub.addEventListener("change", (changeEvent) => {
                 eateryId: changeEvent.target.value
             }
         })
-    eventHub.dispatchEvent(eaterySelectedEvent)
+        eventHub.dispatchEvent(eaterySelectedEvent)
     }
 })
 
 
 const render = (eateries) => {
+    let filteredEateries = eateries.filter(eatery => eatery.ameneties.playground === false)
+    // console.log(filteredEateries)
     contentTarget.innerHTML = `
+    <h3>Eateries</h3>
     <select class="dropdown" id="eateries">
         <option value="0">Please select an eatery...</option>
         ${
-            eateries.map(
+            filteredEateries.map(
                 eatery => {
-                    return `<option value="${eatery.id}">${eatery.businessName}</option>`
+                        return `<option value="${eatery.id}">${eatery.businessName}</option>`
                 }
             ).join()
         }

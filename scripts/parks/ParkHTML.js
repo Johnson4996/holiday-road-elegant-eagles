@@ -1,7 +1,8 @@
+const eventHub = document.querySelector(".container")
+
 export const parkHTML = (parkObj) => {
     return `
     <div>
-        <button id="closeButton--${parkObj.parkCode}}">X</button>
         <h4>${parkObj.fullName}</h4>
     </div>
     <button id="parkDetailButton--${parkObj.parkCode}">Details</button>
@@ -12,3 +13,11 @@ export const parkHTML = (parkObj) => {
     </dialog>
     `
 }
+
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id === "closeButton--park") {
+        // console.log("test")
+          const contentTarget = document.querySelector(`#previewPark`) 
+          contentTarget.innerHTML = contentTarget.remove()
+    }
+})

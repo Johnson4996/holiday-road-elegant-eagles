@@ -38,7 +38,7 @@ EventHub.addEventListener("click", detailsClicked =>{
 const render = (parkObj) =>{
 contentTarget.innerHTML = `
 <h3>Park:</h3>
-    <div class="previewContent">
+    <div class="previewContent" id="previewPark">
     ${
         parkHTML(parkObj)
     }
