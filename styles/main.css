@@ -21,6 +21,8 @@ body {
 
 .container {
     display: flex;
+    position: relative;
+    min-height: 100vh;
 }
 
 .leftContent{
@@ -43,6 +45,7 @@ h4, select {
 }
 .leftContent, .rightContent{
     padding-bottom: 2.5rem;
+    
 }
 footer {
     position: absolute;
