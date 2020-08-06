@@ -2,6 +2,7 @@
 @import "./header.css";
 @import "./plannedItinerary.css";
 @import "./preview.css";
+@import "./CloseButton.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
@@ -37,10 +38,10 @@ body {
     display: flex;
 }
 
-h1, h3, button {
+h1, h3, button, .dialogTitle {
     font-family: 'Playfair Display', serif;
 }
-h4, select {
+h4, select, .weatherDetail, .dialogContent {
     font-family: 'Raleway', sans-serif;
 }
 .leftContent, .rightContent{
