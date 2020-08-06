@@ -1,6 +1,9 @@
+const eventHub = document.querySelector(".container")
+
 export const eateryHTMLConverter = (eateryObject) => {
     return `
         <div>
+            <button id="closeHeader--${eateryObj.id}}">X</button>
             <h4>${eateryObject.businessName}</h4>
         </div>
         <button id="detailButton--${eateryObject.id}">Details</button>
@@ -13,3 +16,13 @@ export const eateryHTMLConverter = (eateryObject) => {
 }
 
 //what it will look like in the preview window
+
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id.startsWith("closeHeader--")) {
+        console.log("test")
+        // const attractionDeletedEvent = new CustomEvent("attractionDeleted", {
+          const contentTarget = document.querySelector(`.previewContent`) 
+          contentTarget.innerHTML = contentTarget.remove()
+        // }
+    }
+})
