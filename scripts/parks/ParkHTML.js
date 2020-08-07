@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".container")
+
 export const parkHTML = (parkObj) => {
     return `
     <div>
@@ -24,3 +26,11 @@ export const parkHTML = (parkObj) => {
 </dialog>
     `
 }
+
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id === "closeButton--park") {
+        // console.log("test")
+          const contentTarget = document.querySelector(`#previewPark`) 
+          contentTarget.innerHTML = contentTarget.remove()
+    }
+})

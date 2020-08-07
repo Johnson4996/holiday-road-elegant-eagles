@@ -1,6 +1,7 @@
 import { weatherHTML } from "./weatherHTML.js"
 import { useWeather } from "./WeatherProvider.js"
 
+const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".weather") //or ".previewContent"
 
 export const weatherList = () => {
@@ -11,9 +12,18 @@ export const weatherList = () => {
     }
 }
 
-const render = (weatherObj) => {
+    const render = (weatherObj) => {
     contentTarget.innerHTML += `
     ${weatherHTML(weatherObj)}
 
     `
 }
+
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id === "closeButton--park") {
+        // console.log("test")
+          const contentTarget = document.querySelector(`#previewWeather`) 
+          contentTarget.innerHTML = contentTarget.remove()
+    }
+})
+

@@ -1,7 +1,11 @@
+// import {removeElement} from "./AttractionList.js"
+const eventHub = document.querySelector(".container")
+
 export const AttractionHTMLConverter = (attractionObj) => {
   return `
-        <div>
-            <h4 class="attractionName">${attractionObj.name}</h4>
+         <div id="divHeader">
+            <button id="closeButtonAttraction--${attractionObj.id}">X</button>
+            <h4 class="attractionName"id="header--${attractionObj.id}">${attractionObj.name}</h4>
         </div>
         <button id="detailButton--${attractionObj.id}">Details</button>
         <dialog id="attractionDialog" class="attraction--${attractionObj.id}">
@@ -25,10 +29,13 @@ export const AttractionHTMLConverter = (attractionObj) => {
     `
 }
 
-// Will potentially add a default attraction function so preview will not be empty
+// this is the click event for all of the removal buttons in content preview
 
-// export const defaultAttraction = () => {
-//   return `
-
-//     `
-// }
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id.startsWith("closeButtonAttraction--")) {
+        // console.log("test")
+          const [closeButton, id] = clickEvent.target.id.split("--")
+          const contentTarget = document.querySelector(`#previewAttraction--${id}`) 
+          contentTarget.innerHTML = contentTarget.remove()
+    }
+})
