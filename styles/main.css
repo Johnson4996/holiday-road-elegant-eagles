@@ -28,6 +28,7 @@ body {
 
 .filterContainer{
     display: flex;
+    width:140%;
 }
 
 h1, h3, button, .dialogTitle {
