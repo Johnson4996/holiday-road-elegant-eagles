@@ -3,7 +3,7 @@ const eventHub = document.querySelector(".container")
 export const parkHTML = (parkObj) => {
     return `
     <div>
-    <h4>${parkObj.fullName}</h4>
+    <h4 class="parkName">${parkObj.fullName}</h4>
 </div>
 <button id="parkDetailButton--${parkObj.parkCode}">Details</button>
 <dialog id ="parksDialog" class="park--${parkObj.parkCode}">

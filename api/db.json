@@ -1,3 +1,16 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "park": "Fort Davis National Historic Site",
+      "attraction": "Largest Fork in the US",
+      "eatery": "Buckhorn Exchange",
+      "id": 1
+    },
+    {
+      "park": "Fort Davis National Historic Site",
+      "attraction": "Largest Fork in the US",
+      "eatery": "Buckhorn Exchange",
+      "id": 2
+    }
+  ]
 }

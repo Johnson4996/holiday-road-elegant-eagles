@@ -4,7 +4,7 @@ export const eateryHTMLConverter = (eateryObject) => {
     return `
         <div id="divHeader">
             <button id="closeButtonEatery--${eateryObject.id}">X</button>
-            <h4>${eateryObject.businessName}</h4>
+            <h4 class="eateryName">${eateryObject.businessName}</h4>
         </div>
         <button id="eatDetailButton--${eateryObject.id}">Details</button>
         <dialog id="eateryDialog" class="eatery--${eateryObject.id}">
