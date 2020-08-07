@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    
+    background-image: url("../images/Header-Image.jpg");
+  
+    /* vh = view height. min-height = the minimum amount the image will shrink when the window is made to be smaller. */
+    height: 42vh;
+    min-height: 200px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+.headerImg {
+    width: 50%;
+}
+
+.siteTitle{
+    align-self: center;
+    color:white;
+}
