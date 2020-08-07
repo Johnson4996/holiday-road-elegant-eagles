@@ -12,8 +12,8 @@ header {
     justify-content: space-evenly;
     flex-direction: row-reverse;
 }
-.cottage {
-    width: 10%;
+.headerImg {
+    width: 50%;
 }
 
 body {
