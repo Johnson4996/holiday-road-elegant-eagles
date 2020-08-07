@@ -17,7 +17,6 @@ eventHub.addEventListener("change", (changeEvent) => {
 
 const render = (eateries) => {
     let filteredEateries = eateries.filter(eatery => eatery.ameneties.playground === false)
-    // console.log(filteredEateries)
     contentTarget.innerHTML = `
     <h3>Eateries</h3>
     <select class="dropdown" id="eateries">
