@@ -8,7 +8,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveItinerary"){
 
         const parkChosen = document.querySelector(".parkName").innerHTML
-        const attractionChosen = document.querySelector(".attractionName").innerHTML
+        const attractionChosen = document.querySelector(".attractionName4").innerHTML
         const eateryChosen = document.querySelector(".eateryName").innerHTML
 
         const newItinerary = {
