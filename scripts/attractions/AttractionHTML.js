@@ -4,7 +4,7 @@ const eventHub = document.querySelector(".container")
 export const AttractionHTMLConverter = (attractionObj) => {
   return `
          <div id="divHeader">
-            <button id="closeButton--attraction">X</button>
+            <button id="closeButtonAttraction--${attractionObj.id}">X</button>
             <h4 class="selectElement"id="header--${attractionObj.id}">${attractionObj.name}</h4>
         </div>
         <button id="detailButton--${attractionObj.id}">Details</button>
@@ -32,9 +32,10 @@ export const AttractionHTMLConverter = (attractionObj) => {
 // this is the click event for all of the removal buttons in content preview
 
 eventHub.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "closeButton--attraction") {
+    if (clickEvent.target.id.startsWith("closeButtonAttraction--")) {
         // console.log("test")
-          const contentTarget = document.querySelector(`#previewAttraction`) 
+          const [closeButton, id] = clickEvent.target.id.split("--")
+          const contentTarget = document.querySelector(`#previewAttraction--${id}`) 
           contentTarget.innerHTML = contentTarget.remove()
     }
 })

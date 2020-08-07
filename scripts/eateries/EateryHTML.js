@@ -3,7 +3,7 @@ const eventHub = document.querySelector(".container")
 export const eateryHTMLConverter = (eateryObject) => {
     return `
         <div id="divHeader">
-            <button id="closeButton--eatery">X</button>
+            <button id="closeButtonEatery--${eateryObject.id}">X</button>
             <h4>${eateryObject.businessName}</h4>
         </div>
         <button id="eatDetailButton--${eateryObject.id}">Details</button>
@@ -32,10 +32,19 @@ export const eateryHTMLConverter = (eateryObject) => {
 
 //what it will look like in the preview window
 
+// eventHub.addEventListener("click", (clickEvent) => {
+//     if (clickEvent.target.id === "closeButton--eatery") {
+//         // console.log("test")
+//           const contentTarget = document.querySelector(`#previewEatery`) 
+//           contentTarget.innerHTML = contentTarget.remove()
+//     }
+// })
+
 eventHub.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "closeButton--eatery") {
+    if (clickEvent.target.id.startsWith("closeButtonEatery--")) {
         // console.log("test")
-          const contentTarget = document.querySelector(`#previewEatery`) 
+          const [closeButton, id] = clickEvent.target.id.split("--")
+          const contentTarget = document.querySelector(`#previewEatery--${id}`) 
           contentTarget.innerHTML = contentTarget.remove()
     }
 })
