@@ -1,5 +1,16 @@
 {
   "itineraries": [
-    
+    {
+      "park": "Effigy Mounds National Monument",
+      "attraction": "Giant Tattoo Needle Largest Fork in the US",
+      "eatery": "Louis' Lunch",
+      "id": 1
+    },
+    {
+        "park": "",
+        "attractions": ["", ""],
+        "eateries": ["", ""],
+        "id": 2
+    }
   ]
 }
