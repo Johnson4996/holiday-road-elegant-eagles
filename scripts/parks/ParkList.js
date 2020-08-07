@@ -25,8 +25,9 @@ EventHub.addEventListener("click", detailsClicked =>{
             const contentTarget = document.querySelector(`.park--${buttonId}`)
             contentTarget.showModal()
         }
-        else if(detailsClicked.target.id === "closeWindow") {
-            const theDialog = detailsClicked.target.parentNode
+        else if(detailsClicked.target.className === "close-button-block1") {
+            console.log("heard1")
+            const theDialog = document.querySelector("#parksDialog")
             theDialog.close()
         }
 })

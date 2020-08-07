@@ -1,15 +1,36 @@
-.previewContainer {
+/*.previewContainer {
   border: 2px dotted goldenrod;
 }
-
+*/
 .previewContent {
   display: flex;
   justify-content: space-between;
 }
 
 .eateries, .attractions, .park {
-  border: 1px dotted black;
   padding: 1rem;
 }
+.weather {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+.weatherForecast{
+  align-self: center;
+}
+.weather, .attractions, .eateries {
+  border-bottom: 1px solid black;
+}
 
+.dialogContent{
+  padding: 1.5rem
+}
+button{
+  border-radius: 30%;
+  border: 2px outset;
+  
+}
+button:hover {
+  background-color: rgb(59, 120, 173)
+}
 

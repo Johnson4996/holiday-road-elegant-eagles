@@ -7,8 +7,9 @@ export const showAttractionDetails = () => {
       const buttonId = clickEvent.target.id.split("--")[1]
       const contentTarget = document.querySelector(`.attraction--${buttonId}`)
       contentTarget.showModal()
-    } else if (clickEvent.target.id === "closeWindow") {
-      const theDialog = clickEvent.target.parentNode
+    } else if (clickEvent.target.className === "close-button-block2") {
+      console.log("heard2")
+      const theDialog = document.querySelector("#attractionDialog")
       theDialog.close()
     }
   })

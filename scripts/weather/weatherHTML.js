@@ -1,10 +1,10 @@
  export const weatherHTML = (weatherObj) => {
      return `
     <div class="day--${weatherObj.dt}">
-        <div>${new Date(weatherObj.dt*1000).toLocaleDateString('en-US')}</div>
-        <div>${weatherObj.weather[0].description}</div>
-        <div>Temperature High ${weatherObj.temp.max}</div>
-        <div>Temperature Low ${weatherObj.temp.min}</div>
+        <div class="weatherDetail">${new Date(weatherObj.dt*1000).toLocaleDateString('en-US')}</div>
+        <div class="weatherDetail">${weatherObj.weather[0].description}</div>
+        <div class="weatherDetail">High ${Math.floor(weatherObj.temp.max)}°F</div>
+        <div class="weatherDetail">Low ${Math.floor(weatherObj.temp.min)}°F</div>
     </div>
     `
  }
