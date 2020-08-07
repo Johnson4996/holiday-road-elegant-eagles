@@ -31,6 +31,14 @@ button{
   
 }
 button:hover {
-  background-color: rgb(59, 120, 173)
+  background-color: rgb(59, 120, 173);
+  cursor: pointer;
 }
-
+.details{
+  margin: 1rem 0;
+  border: 4px double slategray;
+}
+.parkDetail{
+  margin: 0.28rem 0;
+  border: 4px double slategray;
+}

@@ -7,7 +7,7 @@ export const AttractionHTMLConverter = (attractionObj) => {
             <button id="closeButtonAttraction--${attractionObj.id}">X</button>
             <h4 class="attractionName"id="header--${attractionObj.id}">${attractionObj.name}</h4>
         </div>
-        <button id="detailButton--${attractionObj.id}">Details</button>
+        <button class="details" id="detailButton--${attractionObj.id}">Details</button>
         <dialog id="attractionDialog" class="attraction--${attractionObj.id}">
         <div  class="wrapper">
         <a id="closeWindow" href="#" class="close-button">
