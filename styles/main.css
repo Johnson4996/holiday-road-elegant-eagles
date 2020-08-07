@@ -19,11 +19,11 @@ body {
 }
 
 .leftContent{
-    flex: 3;
+    width: 70%
 }
 
 .rightContent{
-    flex: 1;
+    width: 30%;
 }
 
 .filterContainer{
