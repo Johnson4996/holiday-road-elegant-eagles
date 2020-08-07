@@ -1,5 +1,8 @@
 .parkFilter, .attractionsFilter, .eateryFilter {
-    border: 1px dotted black;
     margin: 1rem;
     padding: 1rem;
+}
+.attractionsFilter{
+    border-style: none solid none solid;
+    border: 1px black;
 }
