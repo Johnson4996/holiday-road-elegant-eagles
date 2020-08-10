@@ -1,5 +1,64 @@
 {
   "itineraries": [
-    
+    {
+      "park": "First Ladies National Historic Site",
+      "attraction": [
+        {
+          "id": 4,
+          "name": "Snake World",
+          "state": "AR",
+          "city": "Berryville",
+          "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
+          "ameneties": {
+            "souvenirs": true,
+            "restrooms": true
+          }
+        },
+        {
+          "id": 6,
+          "name": "Largest Fork in the US",
+          "state": "CO",
+          "city": "Creede",
+          "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
+          "ameneties": {
+            "souvenirs": false,
+            "restrooms": false
+          }
+        }
+      ],
+      "eatery": [
+        {
+          "businessName": "Club Paris",
+          "description": "In a former funeral parlor built in Downtown Anchorage in the 1920s sits the oldest steakhouse in Alaska ('Home of the 4 inch thick Filet Mignon!'). At this point, it seems somewhat hilarious that the style was originally intended to 'look like a Parisian sidewalk cafe,' but no one is laughing at the very legit steaks (the signature is that 14oz filet, though we like the rib-eye), and, of course, Alaskan king crab legs.",
+          "state": "AK",
+          "city": "Anchorage",
+          "id": 3,
+          "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": true,
+            "wifi": true,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        },
+        {
+          "businessName": "Louis' Lunch",
+          "description": "There's a lot of debate as to who invented the hamburger as we know it today, but that debate kind of ends at Louis' Lunch, mainly because it's tired of arguing about it, but also because the Library of Congress declared it so. The tiny joint still uses its original cast-iron grills, which cook the hand-ground patties vertically by blasting them with fire. Want ketchup and mustard? Head to one of the other places that claim to have invented the burger: at Louis', your options are cheese, tomato, and onion on toast. That's the way it's been since it 'invented' the burger back in the day, and that's how it'll always be.",
+          "state": "CT",
+          "city": "New Haven",
+          "id": 8,
+          "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": false,
+            "wifi": true,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        }
+      ],
+      "id": 1
+    }
   ]
 }
