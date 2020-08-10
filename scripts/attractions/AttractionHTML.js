@@ -8,16 +8,16 @@ export const AttractionHTMLConverter = (attractionObj) => {
             <h4 class="attractionName"id="header--${attractionObj.id}">${attractionObj.name}</h4>
         </div>
         <button class="details" id="detailButton--${attractionObj.id}">Details</button>
-        <dialog id="attractionDialog" class="attraction--${attractionObj.id}">
+        <dialog id="attractionDialog--${attractionObj.id}" class="attraction--${attractionObj.id}">
             <div  class="wrapper">
-            <a id="closeWindow" href="#" class="close-button">
+            <a id="closeWindow--${attractionObj.id}" href="#" class="close-button">
                 <div class="in">
-                <div class="close-button-block2"></div>
-                <div class="close-button-block2"></div>
+                <div id="close-button-block2--${attractionObj.id}" class="close-button-block2"></div>
+                <div id="close-button-block2--${attractionObj.id}" class="close-button-block2"></div>
         </div>
             <div  class="out">
-                <div class="close-button-block2"></div>
-                <div class="close-button-block2"></div>
+                <div id="close-button-block2--${attractionObj.id}" class="close-button-block2"></div>
+                <div id="close-button-block2--${attractionObj.id}" class="close-button-block2"></div>
             </div>
             </a>
         </div>
