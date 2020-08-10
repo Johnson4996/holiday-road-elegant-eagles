@@ -1,5 +1,64 @@
 {
   "itineraries": [
-    
+    {
+      "park": "Fort Stanwix National Monument",
+      "attraction": [
+        {
+          "id": 4,
+          "name": "Snake World",
+          "state": "AR",
+          "city": "Berryville",
+          "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
+          "ameneties": {
+            "souvenirs": true,
+            "restrooms": true
+          }
+        },
+        {
+          "id": 11,
+          "name": "White House Replica",
+          "state": "GA",
+          "city": "Atlanta",
+          "description": "Want to see the White House without having to go to D.C.? Consider traveling to Atlanta, where they have a replica three-quarters the size! The mini White House used to offer tours of its replica of the Oval Office and the Lincoln bedroom, but now it’s a private home.",
+          "ameneties": {
+            "souvenirs": false,
+            "restrooms": true
+          }
+        }
+      ],
+      "eatery": [
+        {
+          "businessName": "Hudson's Hamburgers",
+          "description": "Burgers and fries. That's the all-American meal. And you can't get it at Hudson's, because it doesn't serve fries. But you can get a burger -- top it with hot mustard and spicy ketchup, if you know what's good for you -- with a side of a few different pies, if you want. There's a lunch counter that fits about 20, and it's packed every day at lunch. Squeeze yourself into a seat at the counter and have a double cheeseburger, a slice of chocolate pie, and a fountain drink. You won't miss the fries. Besides, you can get fries anywhere, so their absence will force you to focus on the deliciousness of everything else on your plate.",
+          "state": "ID",
+          "city": "Coeur d'Alene",
+          "id": 14,
+          "ameneties": {
+            "wheelchairAccessible": false,
+            "petFriendly": false,
+            "wifi": false,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        },
+        {
+          "businessName": "Union Oyster House",
+          "description": "It can’t really be anywhere else. You can make arguments for a lot of other places, actually -- The Student Prince in Springfield and maybe Jacob Wirth or Chart House -- but they don't hold up. Whenever you ask anyone about old places to eat in MA, the brain immediately goes to Union Oyster, before all the rest. It has to. It sits right down by Quincy Market, was originally Atwood & Bacon, and the original menu has a choice between Virginia, Narragansett, or Cape oysters. Plus clams from Ipswich. Its very helpful timeline points out that Daniel Webster used to hang there eating plate after plate of oysters while drinking brandy and water, and it also informs that toothpicks were first used in the US there, when a dude from Maine used to pay Harvard guys to eat there and request them. So yes, it's Union Oyster by a knockout. Please pay the waiter.",
+          "state": "MA",
+          "city": "Boston",
+          "id": 23,
+          "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": false,
+            "wifi": true,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        }
+      ],
+      "id": 1
+    }
   ]
 }
