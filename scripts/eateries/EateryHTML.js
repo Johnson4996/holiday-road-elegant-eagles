@@ -7,17 +7,17 @@ export const eateryHTMLConverter = (eateryObject) => {
             <h4 class="eateryName">${eateryObject.businessName}</h4>
         </div>
         <button id="eatDetailButton--${eateryObject.id}">Details</button>
-        <dialog id="eateryDialog" class="eatery--${eateryObject.id}">
+        <dialog id="eateryDialog--${eateryObject.id}" class="eatery--${eateryObject.id}">
        
             <div  class="wrapper">
-                <a id="closeWindow" href="#" class="close-button">
+                <a id="closeWindow--${eateryObject.id}" href="#" class="close-button">
                     <div class="in">
-                    <div class="close-button-block"></div>
-                    <div class="close-button-block"></div>
+                    <div id="close-button-block--${eateryObject.id}" class="close-button-block"></div>
+                    <div id="close-button-block--${eateryObject.id}" class="close-button-block"></div>
             </div>
             <div  class="out">
-                <div class="close-button-block"></div>
-                <div class="close-button-block"></div>
+                <div id="close-button-block--${eateryObject.id}" class="close-button-block"></div>
+                <div id="close-button-block--${eateryObject.id}" class="close-button-block"></div>
             </div>
                 </a>
             </div>

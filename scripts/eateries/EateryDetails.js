@@ -6,10 +6,10 @@ export const showEateryDetails = () => {
       const buttonId = clickEvent.target.id.split("--")[1]
       const contentTarget = document.querySelector(`.eatery--${buttonId}`)
       contentTarget.showModal()
-    } else if (clickEvent.target.className === "close-button-block") {
-      console.log("heard")
-      const theDialog = document.querySelector("#eateryDialog")
-      theDialog.close()
+    } else if (clickEvent.target.id.startsWith("close-button-block--")) {
+      const [closeWindow, id] = clickEvent.target.id.split("--")
+      const contentTarget = document.querySelector(`#eateryDialog--${id}`)
+      contentTarget.close()
     }
   })
 }
