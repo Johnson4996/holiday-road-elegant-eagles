@@ -10,7 +10,7 @@ const render = (itineraries) => {
         (itineraryObj) => {
             return itineraryHTMLConverter(itineraryObj)
         }
-    ).join("")
+    ).join(" ")
 }
 
 export const itineraryList = () => {
