@@ -23,3 +23,11 @@ eventHub.addEventListener("planStateChanged", () => {
     const newPlans = useItineraries()
     render(newPlans)
 })
+
+eventHub.addEventListener("click",clickEvent =>{
+if(clickEvent.target.id === "parkEventsButton"){
+    const parkEventsClicked = new CustomEvent("parkEventsClicked")
+    eventHub.dispatchEvent(parkEventsClicked)
+    
+}
+})

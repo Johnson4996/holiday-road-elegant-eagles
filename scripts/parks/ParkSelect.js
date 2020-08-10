@@ -1,5 +1,6 @@
 import { getParks, useParks } from "./ParkProvider.js"
 import "./ParkList.js"
+import "../ParkEvents/ParkEventsList.js"
 
 const contentTarget = document.querySelector(".parkFilter")
 const EventHub = document.querySelector(".container")
@@ -16,8 +17,6 @@ EventHub.addEventListener("change", changeEvent => {
     }
 })
 
-
-
 const render = (parksArray) => {
         contentTarget.innerHTML += `
         <h3>Parks</h3>
@@ -31,8 +30,6 @@ const render = (parksArray) => {
     </select>
     `
 }
-
-
 
 export const ParkSelect =() =>{
     getParks()
