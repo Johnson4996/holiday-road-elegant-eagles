@@ -32,6 +32,7 @@ eventHub.addEventListener("click", clickEvent => {
         }
 
     saveItinerary(newItinerary)
+    console.log(attractionChosenArray)
     }
 })
 

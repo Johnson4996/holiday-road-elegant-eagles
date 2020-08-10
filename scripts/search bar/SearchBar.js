@@ -20,6 +20,17 @@ eventhub.addEventListener("keyup", keyupEvent => {
     console.log(filteredAttractions)
 })
 
+eventHub.addEventListener("keyup", (searchEvent) => {
+  if (changeEvent.target.id === "searchbar") {
+    const searchbarEvent = new CustomEvent("searchBegan", {
+      detail: {
+        searchId: changeEvent.target.value,
+      },
+    })
+    eventHub.dispatchEvent(searchbarEvent)
+  }
+})
+
 
 // What would search bar HTML look like?
 
