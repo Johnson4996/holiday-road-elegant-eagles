@@ -14,20 +14,21 @@ const contentTargetAttractions = document.querySelector(".attractions")
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveItinerary"){
 
-        const attractionChosenArray = document.querySelectorAll(".attractionName")
+        // const attractionChosenArray = document.querySelectorAll(".attractionName")
         const parkChosen = document.querySelector(".parkName").innerHTML
-        const eateryChosen = document.querySelector(".eateryName").innerHTML
-         
+        // const eateryChosen = document.querySelector(".eateryName").innerHTML
+        //  attractionChosenArray
+        // array contains ids of attractions, need to translate those to names
 
-        let attractionArray = attractionChosen.map(attraction => {
-            return attraction.innerHTML
-    })
-        console.log(attractionArray)
+    //     let attractionArray = attractionChosen.map(attraction => {
+    //         return attraction.innerHTML
+    // })
+    //     console.log(attractionArray)
 
         const newItinerary = {
             park: parkChosen,
             attraction: attractionChosenArray,
-            eatery: eateryChosen
+            eatery: eateriesChosenArray
         }
 
     saveItinerary(newItinerary)
@@ -48,15 +49,16 @@ const renderAttraction = (attractionObj) => {
 
 eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   const attractionChosen = attractionSelectedEvent.detail.attractionId
-    attractionChosenArray.push(attractionChosen)
   const arrayOfAttractions = useAttractions()
   const attractionObj = arrayOfAttractions.find((attraction) => {
     return parseInt(attractionChosen) === attraction.id
   })
   renderAttraction(attractionObj)
+  attractionChosenArray.push(attractionObj)
+  console.log(attractionChosenArray)
 })
 
-
+// 
 
 
 
@@ -70,10 +72,11 @@ const renderEatery = (eateryObject) => {
 
 eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
   const eateryChosen = eaterySelectedEvent.detail.eateryId
-    eateriesChosenArray.push(eateryChosen)
   const arrayOfEateries = useEateries()
   const foundEateryObj = arrayOfEateries.find((eatery) => {
     return parseInt(eateryChosen) === eatery.id
   })
   renderEatery(foundEateryObj)
+  eateriesChosenArray.push(foundEateryObj)
+  console.log(eateriesChosenArray)
 })

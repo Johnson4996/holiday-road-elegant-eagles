@@ -1,16 +1,64 @@
 {
   "itineraries": [
     {
-      "park": "Effigy Mounds National Monument",
-      "attraction": "Giant Tattoo Needle Largest Fork in the US",
-      "eatery": "Louis' Lunch",
+      "park": "Fort Davis National Historic Site",
+      "attraction": [
+        {
+          "id": 2,
+          "name": "Giant Tattoo Needle",
+          "state": "AK",
+          "city": "Anchorage",
+          "description": "If you’re a big fan of tattoos, you’re definitely going to want to snap a pic in front of Anchorage’s giant tattoo needle. On display in the parking lot of a tattoo parlor, this needle is truly eye catching.",
+          "ameneties": {
+            "souvenirs": false,
+            "restrooms": false
+          }
+        },
+        {
+          "id": 4,
+          "name": "Snake World",
+          "state": "AR",
+          "city": "Berryville",
+          "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
+          "ameneties": {
+            "souvenirs": true,
+            "restrooms": true
+          }
+        }
+      ],
+      "eatery": [
+        {
+          "businessName": "Buckhorn Exchange",
+          "description": "The Colorado dining scene has come a long way since the Buckhorn Exchange opened. There's practically a brewery and a buzzed-about restaurant on every street corner in Denver these days. But the Buckhorn Exchange is a glimpse into what Colorado restaurants used to be famous for -- giant portions of steak that will feed you, your friends, and your friends' friends. Beyond the steak, there's also the opportunity to eat practically every animal that was on Noah's ark. And eating here puts you in good company, as Teddy Roosevelt and Eisenhower both dined here.",
+          "state": "CO",
+          "city": "Denver",
+          "id": 7,
+          "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": false,
+            "wifi": false,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        },
+        {
+          "businessName": "Louis' Lunch",
+          "description": "There's a lot of debate as to who invented the hamburger as we know it today, but that debate kind of ends at Louis' Lunch, mainly because it's tired of arguing about it, but also because the Library of Congress declared it so. The tiny joint still uses its original cast-iron grills, which cook the hand-ground patties vertically by blasting them with fire. Want ketchup and mustard? Head to one of the other places that claim to have invented the burger: at Louis', your options are cheese, tomato, and onion on toast. That's the way it's been since it 'invented' the burger back in the day, and that's how it'll always be.",
+          "state": "CT",
+          "city": "New Haven",
+          "id": 8,
+          "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": false,
+            "wifi": true,
+            "diaperFacility": true,
+            "playground": false,
+            "restrooms": true
+          }
+        }
+      ],
       "id": 1
-    },
-    {
-        "park": "",
-        "attractions": ["", ""],
-        "eateries": ["", ""],
-        "id": 2
     }
   ]
 }
