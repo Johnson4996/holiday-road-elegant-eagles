@@ -55,10 +55,8 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
   })
   renderAttraction(attractionObj)
   attractionChosenArray.push(attractionObj)
-  console.log(attractionChosenArray)
-})
-
-// 
+//   console.log(attractionChosenArray)
+}) 
 
 
 
@@ -78,5 +76,5 @@ eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
   })
   renderEatery(foundEateryObj)
   eateriesChosenArray.push(foundEateryObj)
-  console.log(eateriesChosenArray)
+//   console.log(eateriesChosenArray)
 })
