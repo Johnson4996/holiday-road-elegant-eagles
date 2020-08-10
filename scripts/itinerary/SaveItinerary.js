@@ -41,10 +41,18 @@ let eateriesChosenArray = []
 
 
 const renderAttraction = (attractionObj) => {
-  contentTargetAttractions.innerHTML += `
-    <div class="previewContent" id="previewAttraction--${attractionObj.id}">
-        ${AttractionHTMLConverter(attractionObj)}
-    </div>`
+        const attractionVariable = attractionChosenArray.find(attraction => {
+            return attraction.id === attractionObj.id
+        })
+    if(attractionVariable !== undefined ){
+        alert("You cannot pick the same item twice")
+    } else {
+        attractionChosenArray.push(attractionObj)
+        contentTargetAttractions.innerHTML += `
+        <div class="previewContent" id="previewAttraction--${attractionObj.id}">
+            ${AttractionHTMLConverter(attractionObj)}
+        </div>`
+    }
 }
 
 eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
@@ -54,7 +62,6 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
     return parseInt(attractionChosen) === attraction.id
   })
   renderAttraction(attractionObj)
-  attractionChosenArray.push(attractionObj)
 //   console.log(attractionChosenArray)
 }) 
 
@@ -62,19 +69,28 @@ eventHub.addEventListener("attractionSelected", (attractionSelectedEvent) => {
 
 
 const renderEatery = (eateryObject) => {
-  contentTargetEateries.innerHTML += `
-    <div class="previewContent" id="previewEatery--${eateryObject.id}">
-    ${eateryHTMLConverter(eateryObject)}
-    </div>`
+      const eateryVariable = eateriesChosenArray.find(eatery => {
+            return eatery.id === eateryObject.id
+            })
+    if(eateryVariable !== undefined ){
+        alert("You cannot pick the same item twice")
+    } else {
+        eateriesChosenArray.push(eateryObject)
+        contentTargetEateries.innerHTML += `
+          <div class="previewContent" id="previewEatery--${eateryObject.id}">
+          ${eateryHTMLConverter(eateryObject)}
+          </div>`
+
+    }
 }
 
 eventHub.addEventListener("eaterySelected", (eaterySelectedEvent) => {
   const eateryChosen = eaterySelectedEvent.detail.eateryId
   const arrayOfEateries = useEateries()
-  const foundEateryObj = arrayOfEateries.find((eatery) => {
-    return parseInt(eateryChosen) === eatery.id
-  })
-  renderEatery(foundEateryObj)
-  eateriesChosenArray.push(foundEateryObj)
-//   console.log(eateriesChosenArray)
+    const foundEateryObj = arrayOfEateries.find((eatery) => {
+        return parseInt(eateryChosen) === eatery.id
+      })
+      renderEatery(foundEateryObj)
+      
+    console.log(eateriesChosenArray)
 })
