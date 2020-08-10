@@ -1,5 +1,14 @@
 {
   "itineraries": [
+<<<<<<< HEAD
     
+=======
+    {
+      "park": "Fort Davis National Historic Site",
+      "attraction": "Snake World",
+      "eatery": "Hy's Steak House",
+      "id": 1
+    }
+>>>>>>> f511a0e217e85b54f0071a2ca4d1648a86391da8
   ]
 }
