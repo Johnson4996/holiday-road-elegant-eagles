@@ -38,4 +38,8 @@ eventHub.addEventListener("click", (clickEvent) => {
           const contentTarget = document.querySelector(`#previewAttraction--${id}`) 
           contentTarget.innerHTML = contentTarget.remove()
     }
-})
+    })
+
+        // could try the delete method to fix api bug
+        // fetch(‘https://jsonplaceholder.typicode.com/todos/1', {
+        // method: ‘DELETE’
